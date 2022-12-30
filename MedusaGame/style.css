@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap');
+
+/* css ilk başlangıç */
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Electrolize', sans-serif;
+}
+/* css ilk bitiş */
+
+/* navbar başlangıç */
+.navbar{
+    background-color: rgb(177, 175, 175);
+    height: 60px;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo{
+    color: black;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+}
+
+.menu-list-item{
+    cursor: pointer;
+}
+
+.menu-list-item:hover{
+    font-weight: bold;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-container{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-text-container{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    line-height: 1;
+}
+
+.toggle{
+    width: 40px;
+    background-color: black;
+    position: relative;
+    height: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+    transition: .5s ease all;
+
+}
+/* navbar bitiş */
+
+/* sidebar başlangıç */
+.sidebar{
+    background-color: rgb(177, 175, 175);
+    color: black;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    row-gap: 40px;
+    position: fixed;
+    top: 0;
+}
+
+.sidebar i{
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* sidebar bitiş */
+
+/* featured başlangıç */
+.content-wrapper{
+    margin-left: 50px;
+}
+
+.featured-content{
+    position: fixed;
+    background: url("img/background.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-title{
+    width: 400px;
+}
+
+.featured-desc{
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin: 30px 0;
+}
+
+.featured-buttons{
+    display: flex;
+    column-gap: 20px;
+}
+
+.featured-buttons button{
+    padding: 10px 25px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    column-gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.featured-buttons .info-button{
+    background-color: rgb(145, 142, 142, 0.5);
+    color: white;
+}
+/* featured bitiş */
+
+/* dark mode başlangıç */
+.container.active{
+    background-color: white;
+}
+
+.navbar.active{
+    background-color: white;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.toggle-ball.active{
+    transform: translateX(-20px);
+}
+/* dark mode bitiş */
+
+/* responsive başlangıç */
+@media only screen and (max-width: 800px){
+    .menu-container{
+        display: none;
+    }
+
+    .featured-content{
+        height: 85vh;
+    }
+
+    .featured-title{
+        width: 200px;
+    }
+
+    .featured-desc{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 200px;
+        padding: 0;
+    }
+}
+/* responsive bitiş */
+
+.game1{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+}
